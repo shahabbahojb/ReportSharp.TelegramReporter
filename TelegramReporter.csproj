@@ -4,6 +4,14 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>ReportSharp.TelegramReporter</PackageId>
+        <Title>TelegramReporter</Title>
+        <Description>DiscordReporter for ReportSharp package
+           With this package you can get your project reports like exception and requests from telegram</Description>
+        <Copyright>MIT</Copyright>
+        <PackageProjectUrl>https://github.com/shahabbahojb/ReportSharp.TelegramReporter</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/shahabbahojb/ReportSharp.TelegramReporter</RepositoryUrl>
+        <PackageTags>report exeption,telegram,telegrambot,report exeption Telegram,report requests</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
