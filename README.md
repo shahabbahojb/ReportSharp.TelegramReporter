@@ -67,3 +67,19 @@ services.AddReportSharp(options => {
 
 
 if you want to it for all reporters, you can use only `AddReporter` method
+
+### Fourth Step :
+
+You need to add following lines to `Configure` method in `Startup` class:
+
+```
+app.UseReportSharp(configure => {
+    configure.UseReportSharpMiddleware<ReportSharpMiddleware>();
+});
+
+```
+
+## Note :
+For find your `chatId` you just need to get : 
+
+` https://api.telegram.org/bot<YourBOTToken>/getUpdates`
