@@ -62,6 +62,7 @@ services.AddReportSharp(options => {
                     {
                         Your Chat Ids
                     }));
+});                    
 
 ```
 
