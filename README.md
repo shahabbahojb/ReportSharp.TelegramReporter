@@ -16,3 +16,54 @@ Create Bot from BotFather from telegram and get your bot token
 ### Second Step : 
 
 You need to install and configure [ReportSharp](https://www.nuget.org/packages/ReportSharp/) 1.0.5 or later to use this package.
+
+You need to install and configure [ReportSharp.Telegram](https://www.nuget.org/packages/ReportSharp/)
+
+
+### Third Step :
+
+Add following Codes to `ConfigureServices` method in `Startup` class:
+```
+
+services.AddReportSharp(options => {
+    options.ConfigReportSharp(configBuilder =>
+        configBuilder.SetWatchdogPrefix("/")
+    );
+    
+    
+    //for report Request
+     options.AddRequestReporter(() => new TelegramReportOptionsBuilder()
+                    .SetToken("Your Telegram BotToken")
+                    .AddChatIds(new List<int>()
+                    {
+                        Your Chat Ids
+                    }));
+                    
+      //for report Exception
+     options.AddExceptionReporter(() => new TelegramReportOptionsBuilder()
+                    .SetToken("Your Telegram BotToken")
+                    .AddChatIds(new List<int>()
+                    {
+                        Your Chat Ids
+                    }));
+      
+        //for report Data
+     options.AddDataReporter(() => new TelegramReportOptionsBuilder()
+                    .SetToken("Your Telegram BotToken")
+                    .AddChatIds(new List<int>()
+                    {
+                        Your Chat Ids
+                    }));
+                    
+       options.AddReporter<TelegramReporter.TelegramReporter,TelegramReportOptionsBuilder>(
+                    () => new TelegramReportOptionsBuilder()
+                    .SetToken("Your Telegram BotToken")
+                    .AddChatIds(new List<int>()
+                    {
+                        Your Chat Ids
+                    }));
+
+```
+
+
+if you want to it for all reporters, you can use only `AddReporter` method
