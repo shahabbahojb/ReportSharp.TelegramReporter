@@ -17,7 +17,7 @@ Create Bot from BotFather from telegram and get your bot token
 
 You need to install and configure [ReportSharp](https://www.nuget.org/packages/ReportSharp/) 1.0.5 or later to use this package.
 
-You need to install and configure [ReportSharp.Telegram](https://www.nuget.org/packages/ReportSharp/)
+You need to install and configure [ReportSharp.Telegram](https://www.nuget.org/packages/ReportSharp.TelegramReporter/)
 
 
 ### Third Step :
