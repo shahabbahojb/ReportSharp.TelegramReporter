@@ -23,7 +23,7 @@ You need to install and configure [ReportSharp.Telegram](https://www.nuget.org/p
 ### Third Step :
 
 Add following Codes to `ConfigureServices` method in `Startup` class:
-```
+```cs
 
 services.AddReportSharp(options => {
     options.ConfigReportSharp(configBuilder =>
@@ -73,7 +73,7 @@ if you want to it for all reporters, you can use only `AddReporter` method
 
 You need to add following lines to `Configure` method in `Startup` class:
 
-```
+```cs
 app.UseReportSharp(configure => {
     configure.UseReportSharpMiddleware<ReportSharpMiddleware>();
 });
